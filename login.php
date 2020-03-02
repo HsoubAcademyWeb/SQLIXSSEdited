@@ -55,7 +55,7 @@
 				?>
 					<div style="float:right" class="alert alert-danger"><?php echo $_SESSION['error']?></div>
 				<?php
-					session_unset($_SESSION['error']);
+					session_unset();
 					}
 				?>
 					<div class="form-group">
