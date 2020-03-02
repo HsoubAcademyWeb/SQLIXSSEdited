@@ -26,7 +26,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" >
 <head>
     <meta charset="UTF-8">
     <title>Hsoub Weather App</title>
@@ -42,26 +42,28 @@
 	</nav>
 	<div class="col-md-2"></div>
 	<div class="col-md-8 well">
-		<h3 > سجل دخول لاستخدام تطبيق حالة الطقس</h3>
-		<hr style="border-top:1px dotted #ccc;"/>
-		<a href="index.php">لا تمتلك حساب.. أنشئ من هنا</a>
+		<div style="float:right">
+			<h2> سجل دخول لاستخدام تطبيق حالة الطقس</h2>
+		
+		     <a  href="index.php">لا تمتلك حساب.. أنشئ من هنا</a>
+		</div>
 		<br style="clear:both;"/><br />
 		<div class="row col-md-12">
 			<form method="POST" action="login.php">	
 			    <?php
 					if(ISSET($_SESSION['error'])){
 				?>
-					<div class="alert alert-danger"><?php echo $_SESSION['error']?></div>
+					<div style="float:right" class="alert alert-danger"><?php echo $_SESSION['error']?></div>
 				<?php
 					session_unset($_SESSION['error']);
 					}
 				?>
 					<div class="form-group">
-					<label>اسم المستخدم </label>
+					<label style="float:right">اسم المستخدم </label>
 					<input type="text" name="username" class="form-control" value="<?php echo isset($_POST['username'])? $_POST['username'] : "" ?>" required />
 				</div>
 				<div class="form-group">
-					<label>كلمة المرور</label>
+					<label style="float:right">كلمة المرور</label>
 					<input type="password" name="password" class="form-control" required />
 				</div>
 				
