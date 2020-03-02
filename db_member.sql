@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2020 at 04:18 AM
+-- Generation Time: Mar 02, 2020 at 05:38 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -36,6 +36,13 @@ CREATE TABLE `admin` (
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`, `email`, `firstname`, `lastname`) VALUES
+(2, 'admin2', '123456', 'admin2@gmail.com', 'admin2', 'admin2');
 
 -- --------------------------------------------------------
 
@@ -80,7 +87,8 @@ INSERT INTO `member` (`id`, `username`, `password`, `email`, `firstname`, `lastn
 (1, 'hsoub', '123456', 'hsoubacademy@gmail.com', 'hsoub', 'academy'),
 (4, 'hsoub2', 'e10adc3949ba59abbe56e057f20f883e', 'HsoubWeb@gmail.com', 'hsoub', 'web'),
 (5, 'hsoub3', '123456', 'course@gmail.com', 'hsoub', 'course'),
-(6, 'Entesat', 'e10adc3949ba59abbe56e057f20f883e', 'entesar@gmail.com', 'Entesar', 'ElBanna');
+(6, 'Entesat', 'e10adc3949ba59abbe56e057f20f883e', 'entesar@gmail.com', 'Entesar', 'ElBanna'),
+(8, 'admin', 'admin', 'admin@gmail.com', 'admin', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -112,7 +120,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -124,7 +132,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
